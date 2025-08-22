@@ -1,0 +1,8 @@
+# Powershell Scripts
+        .gradle/
+        .idea/
+        build/
+        local.properties
+        *.iml
+        *.apk
+        *.aab
