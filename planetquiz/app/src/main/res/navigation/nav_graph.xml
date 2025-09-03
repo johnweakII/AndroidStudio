@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/questionsFragment">
+
+    <fragment
+        android:id="@+id/questionsFragment"
+        android:name="com.example.planetquiz.QuestionsFragment"
+        android:label="Questions">
+        <action
+            android:id="@+id/action_questionsFragment_to_answerOptionsFragment"
+            app:destination="@id/answerOptionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/answerOptionsFragment"
+        android:name="com.example.planetquiz.AnswerOptionsFragment"
+        android:label="Answer Options">
+        <argument
+            android:name="questionIndex"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_answerOptionsFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.planetquiz.AnswerFragment"
+        android:label="Answer">
+        <argument
+            android:name="isCorrect"
+            app:argType="boolean" />
+        <argument
+            android:name="questionIndex"
+            app:argType="integer" />
+    </fragment>
+</navigation>
