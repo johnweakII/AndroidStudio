@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/ic_home" />
+    <item
+        android:id="@+id/accountFragment"
+        android:title="Account"
+        android:icon="@drawable/ic_user" />
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_account" />
+    <item
+        android:id="@+id/mySportsFragment"
+        android:title="My Sports"
+        android:icon="@drawable/ic_sports" />
+
+</menu>
