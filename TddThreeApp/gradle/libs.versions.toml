@@ -1,0 +1,48 @@
+[versions]
+# Plugin Versions
+agp = "8.12.3" # Update to match your specific Android Studio version
+kotlin = "2.0.0"
+
+# Library Versions
+coreKtx = "1.15.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+junit = "4.13.2"
+androidxJunit = "1.2.1"
+espresso = "3.6.1"
+runner = "1.7.0"
+material3 = "1.4.0"
+composeMaterial = "1.5.5"
+espressoContrib = "3.7.0"
+
+[libraries]
+# Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Testing
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+androidx-compose-material = { group = "androidx.wear.compose", name = "compose-material", version.ref = "composeMaterial" }
+androidx-espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espressoContrib" }
+
+[plugins]
+# The name "android-application" creates -> libs.plugins.android.application
+
+# The name "kotlin-android" creates -> libs.plugins.kotlin.android
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+# The name "kotlin-compose" creates -> libs.plugins.kotlin.compose
+# note: This specific ID is required for Kotlin 2.0+
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# Naming here determines the 'libs.plugins.X' syntax
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
